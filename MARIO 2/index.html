@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARIO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="game">
+        <img class="mario" src="src/img/mario.gif" alt="mario">
+        <img class="pipe" src="src/img/pipe.png" alt="cano">
+        <img class="goomba" src="src/img/goomba2.gif" alt="goomba">
+        <img class="pipe2" src="src/img/pipe2.png" alt="cano2">
+        <img class="fogo" src="src/img/fogo.png" alt="fogo">
+        <img class="clouds" src="src/img/clouds.png" alt="nuvem">
+        <img class="end" src="src/img/end.gif" alt="end">
+        <button class="start" onclick="startGame()">Iniciar</button>
+        <div class="score"></div>
+    </div>
+    
+    <div class="game-over">
+        <h1></h1>
+            <button onclick="restartGame()">
+                Reiniciar
+            </button>
+    </div>
+
+    <div class="score">Score: <span class="scorePoints">0</span></div>
+
+</body>
+
+<script src="mario.js"></script>
+
+</html>
+

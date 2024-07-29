@@ -1,0 +1,252 @@
+/*Para melhor aprendizado inserir cada atributo individualmente 
+e analisar as mudanças que ele causa 
+
+Deixa mais facil trabalhar com margens*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Alterações na tela do jogo*/
+.game{
+    border-bottom: 30px solid green;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/*botão*/
+button {
+    background: green;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: none;
+    padding: 1rem;
+    position: absolute;
+    justify-content: center;
+    right: 50vw;
+    top: 50vh;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*efeito ao passar o mouse em cima do botão*/
+button:hover {
+    border: 2px solid green;
+    background: none;
+    color: green;
+}
+
+/*Estilo do cano*/
+.pipe {
+    position: absolute;
+    bottom: 0;
+    right: -80px;
+    width: 80px;
+}
+
+/*Estilo do cano*/
+.pipe2 {
+    position: absolute;
+    bottom: 0;
+    top: 0px;
+    right: 80vh;
+    width: 80px;
+}
+
+.goomba {
+    position: absolute;
+    bottom: 0;
+    right: -80px;
+    width: 80px;
+}
+
+/*/Mario*/
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+/*fogo*/
+
+.fogo {
+    width: 50px;
+    position: absolute;
+    bottom: 35px;
+    right: 0px;
+}  
+
+/*Adciona a animação do fogo*/
+.fogo-animation {
+    animation: fogo-animation 2s infinite linear;
+}
+
+
+@keyframes fogo-animation {
+    from {
+        right: 90%;
+    }
+ 
+    to {
+        right: -120%;
+    }
+}
+
+/*Nuvens*/
+.clouds {
+    width: 550px;
+    position: absolute;
+    top: 0;
+    animation: clouds-animation 20s infinite linear;
+}
+
+/*Mensagem de Game over */
+.game-over {
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.322);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    right: 0vw;
+    top: 0vh;
+    
+}
+.game-over h1 {
+    font-family: "Pixelify Sans";
+    font-size: 10rem;
+    color: red;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+}
+
+.game-over button {
+
+    align-content: flex-end;
+}
+
+/*Adciona a animação do cano*/
+.pipe-animation {
+    animation: pipe-animation 2s infinite linear;
+}
+
+
+@keyframes pipe-animation {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.goomba-animation {
+    animation: goomba-animation 1.5s infinite linear;
+}
+
+
+@keyframes goomba-animation {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+
+/*Adciona a animação do cano2*/
+.pipe2-animation {
+    animation: pipe2-animation 2s infinite linear;
+}
+
+
+
+@keyframes pipe2-animation {
+    from {
+        right: -120px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+/*Estilo da class de pulo*/
+.jump {
+    animation: jump 800ms ease-out;
+}
+
+/*Animação de pulo*/
+@keyframes jump {
+    0% {
+        bottom:0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+/*Adcione essa animação para o arquivo css */
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+/* Adcione essa propriedade ao .cloud*/
+
+/*Adcione o css do score*/
+.score {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    color: green;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.end {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    position: absolute;
+    
+}
+
